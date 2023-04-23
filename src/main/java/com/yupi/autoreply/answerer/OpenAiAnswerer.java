@@ -30,8 +30,8 @@ public class OpenAiAnswerer implements Answerer {
         CreateCompletionRequest request = new CreateCompletionRequest();
         request.setPrompt(prompt);
         request.setModel(openAiConfig.getModel());
-        request.setTemperature(0);
-        request.setMax_tokens(1024);
+        request.setTemperature(0.5);
+        request.setMax_tokens(3000);
         CreateCompletionResponse response = openAiApi.createCompletion(request, openAiConfig.getApiKey());
         List<CreateCompletionResponse.ChoicesItem> choicesItemList = response.getChoices();
         String answer = choicesItemList.stream()
