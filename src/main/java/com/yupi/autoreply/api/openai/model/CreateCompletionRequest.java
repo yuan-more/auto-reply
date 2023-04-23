@@ -24,7 +24,7 @@ public class CreateCompletionRequest {
 
     private Integer max_tokens;
 
-    private Integer temperature;
+    private Double temperature;
 
     private Integer top_p;
 
